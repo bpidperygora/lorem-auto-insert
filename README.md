@@ -2,6 +2,10 @@
 
 Automatically replaces `lorem[number];` with lorem ipsum text in any input field.
 
+If this extension saves you time and you'd like to say thanks:
+
+☕ [Buy me a coffee](https://coff.ee/bpidperygoa)
+
 ## Installation
 
 1. Open Firefox and navigate to `about:debugging`
