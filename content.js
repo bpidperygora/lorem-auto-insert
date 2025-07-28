@@ -124,12 +124,20 @@ class LoremIpsumReplacer {
       element.value = text;
       element.dispatchEvent(new Event('input', { bubbles: true }));
     } else if (element.contentEditable === 'true') {
-      // Convert line breaks to HTML paragraphs for WYSIWYG editors
-      /** @type {string} */
-      const htmlText = text.replace(/\n\n/g, '</p><p>');
-      
-      if (htmlText.includes('</p><p>')) {
-        element.innerHTML = `<p>${htmlText}</p>`;
+      // Check if text contains paragraph breaks
+      if (text.includes('\n\n')) {
+        // Safe DOM creation for paragraphs - no innerHTML usage
+        element.textContent = ''; // Clear existing content
+        
+        /** @type {Array<string>} */
+        const paragraphs = text.split('\n\n');
+        
+        paragraphs.forEach((paragraphText, index) => {
+          /** @type {HTMLParagraphElement} */
+          const p = document.createElement('p');
+          p.textContent = paragraphText.trim(); // Safe text assignment
+          element.appendChild(p);
+        });
       } else {
         element.textContent = text;
       }

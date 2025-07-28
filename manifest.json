@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Lorem Ipsum Auto-Insert",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Automatically replaces lorem[number]; with lorem ipsum text in any input field. Supports paragraphs and WordPress editors.",
   "short_name": "Lorem Auto",
   "author": "Borys Pidperygora",
