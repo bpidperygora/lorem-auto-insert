@@ -6,14 +6,6 @@ If this extension saves you time and you'd like to say thanks:
 
 ☕ [Buy me a coffee](https://coff.ee/bpidperygoa)
 
-## Installation
-
-1. Open Firefox and navigate to `about:debugging`
-2. Click "This Firefox" 
-3. Click "Load Temporary Add-on"
-4. Select the `manifest.json` file from this directory
-5. Extension will be loaded and active immediately
-
 ## Usage
 
 Type `lorem` followed by a number and semicolon in any input field:
